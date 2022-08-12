@@ -1,20 +1,11 @@
-
-name: build-test
-
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+on: push
 
 jobs:
-  build:
+  build-node:
     runs-on: ubuntu-latest
+    container: node:16
     steps:
+      -run: node --version
+      -run: npm --version
       - uses: actions/checkout@v3
-      - name: Setup Node 16.x
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16.x
-          cache: npm
       - run: npm install
