@@ -18,7 +18,16 @@ node server.js
 
 You can browse the apis at <http://localhost:3000>
 
-## Tutorial
-You can find the tutorial for this application at [The CalliCoder Blog](https://www.callicoder.com) - 
+## Steps to Run Docker 
+Docker compose is used to integrate node and mongo containers.
 
+```bash
+docker-compose build
+```
+
+```bash
+docker-compose up
+```
+
+## Tutorial
 <https://www.callicoder.com/node-js-express-mongodb-restful-crud-api-tutorial/>
